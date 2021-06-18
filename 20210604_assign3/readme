@@ -1,0 +1,64 @@
+name:       정현우
+student ID: 20210604
+
+recieved help:
+
+Comparing implementation of customer_manager using array and hash table
+    Array
+        Pros: 
+            1. Each item is placed next to each other.
+            (Maybe useful in some further functions)
+            2. Don't need hash functions; 
+            will take less time if hash function is complex
+        Cons:
+            1. To search an item, we have to loop through the array.
+                (too much time spent)
+            2. Empty spaces exist after unregister.
+                (inefficient memory use)
+            3. Hard to handle big data set.
+            4. Less secure; 
+                can find wanted data if one location was found.
+    Hash table
+        Pros
+            1. Less time complexities.(less loop)
+            2. Can handle big data set easier.
+            3. More secure;
+                need hash function to find wanted data.
+        Cons:
+            1. Takes more memory, because of pointer to next element
+            2. Need hash functions; 
+                take more time if hash function is complex
+            3. Need re-hashing while expanding the table;
+            take more time if hash function is complex or 
+                if the program needs many bucket expansion
+
+Implemented hash table expansion.
+    line 100 in customer_manager2.c : void ExpandCustomerDB(DB_T d)
+    Used it at RegisterCustomer with condition. (line 198)
+    (Although it is a little inefficient to expand hash table after
+    registration, I used it at the end for clear expression.)
+
+Spent time
+    part 1: 14 hours
+    part 2: 6 hours
+
+Additional Information
+    In UserInfo structure in customer_manager2.c,
+    I additionally implemented prevbyName and prevbyID element, 
+    not only nextbyName and nextbyID.
+    Although it increases memory usage by increasing the size of 
+    UserInfo structure, it helps more intuitive implementation and
+    improves speed when many elements exist in a bucket.
+    (especially when the number of elements exeeds 2^20, 
+    because number of loop decreases to 1 in RegisterCustomer 
+    if prevbyName and prevbyID exist).
+
+    This implementation may decrease the speed in 
+    'best' hash table condition, but it prevents the program 
+    from getting too slow in 'worst' hash table condition.
+    Plus, size of two pointers will have less effect 
+    if UserInfo structure contains more other elements.
+    (ex: array of purchased products,...)
+
+    Changing table expansion threshold percentage from 75% to
+    higher value may increase the implementation speed.

@@ -1,0 +1,23 @@
+name:       정현우
+student ID: 20210604
+
+recieved help:
+
+Q.  Is it possible for StrCopy to call assert to verify that the
+    destination memory area specified by the caller is large enough?
+
+A.  It is not possible. 
+    We can verify the size of destination memory area in 
+    limited situations, like the case its length parameter is given
+    or it is 'clearly' terminated(by NULL character, ...).
+    As there is no guarantee that 
+    destination is not garbage data or filled(cleared) with '\0',
+    we cannot check if the destination memory area 
+    is large enough in StrCopy function.
+
+implementation method: 
+    pointer notation (for extra credit)
+
+Time spent:
+    8 hours in Part 1
+    8 hours in Part 2

@@ -1,0 +1,13 @@
+현재 참여자: 정현우, 이원우, 안영은, 안준서
+정보공유를 위한 파일
+
+dynarray 형식으로 token을 다루고, main/input/execute로 핸들링할 예정
+
+
+main에서는 home directory의 .ishrc를 불러오고, 파일명을 글로벌 변수로 저장
+
+input에서는 들어온 line을 잘라서 Token 형식으로 분해(현재 일반 문자와 |까지 구현) (I/O setting과 background 문자 등은 아직 미구현)
+
+execute(구현예정)
+parse()에서 pipeline 구현
+execute()에서 토큰으로 각 명령어 해석, 에러메시지 출력

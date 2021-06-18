@@ -1,0 +1,24 @@
+Name:       정현우
+Student ID: 20210604
+
+ASSIGNMENT #4
+
+Recieved Help:
+    function Implementation: EE209 lecture PPT
+
+
+Spent Time:
+    16 hours + minor edit 4 hours
+
+
+Additional Information
+    The program recognizes the command if the command is 
+    in front of input stream.
+        ex) p123 considered as 'p' command
+            123p considered as input 123
+
+    Program crashes if user tries division by zero.
+
+    Cannot handle overflow/underflow. (but does not crash)
+    Input and Output should be in range of int type 
+    for proper calculation.

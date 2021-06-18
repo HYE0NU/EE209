@@ -1,0 +1,47 @@
+echo "*** EXECUTABLE BINARY COMMANDS"
+date
+/bin/date
+pwd
+ls
+ls -al
+echo
+echo one two three
+echo one "two   three" four
+echo "|"
+printenv
+
+echo "*** SHELL BUILTIN COMMANDS (cd, setenv, unsetenv)"
+cd /usr
+pwd
+cd bin
+pwd
+cd
+pwd
+setenv XXX 123
+printenv
+unsetenv XXX
+printenv
+
+echo "*** PIPE"
+ls -al | grep drw
+ls -al|grep rwx
+ps -A | grep sshd | sed -e '1,10d'
+ps -A | grep sshd | wc -l
+setenv XXX 123
+printenv | grep XXX
+
+echo "*** ERRONEOUS COMMANDS"
+echo 'one"
+echo one"
+echo "one'
+nosuchcommand
+cd nosuchdir
+setenv
+unsetenv
+cat .bashrc | | grep export
+
+echo "*** MULTIPLE REDIRECTION ERRORS"
+cat .ishrc > /tmp/no1 > /tmp/no2
+grep "echo" < .ishrc < .ishrc
+cat .ishrc | grep "echo" < .ishrc
+cat .ishrc > /tmp/no | grep "echo"

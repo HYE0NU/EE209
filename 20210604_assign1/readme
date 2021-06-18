@@ -1,0 +1,14 @@
+20210604 정현우 assignment #1
+
+name: 정현우
+student ID: 20210604
+assignment number: 1
+
+recieved help: 
+EE209 PPT (header file, enum, switch-case, pointer)
+이원우 (idea of using individual states for starting/ending comments)
+
+time spent: about 15 hrs
+처음에 EE209 홈페이지의 hint를 보지 못해 난항을 겪었습니다.
+DFA state의 사용과 모듈 사용에 대해 알 수 있어 좋았습니다. 
+test file 중 "abc\"def"와 같은 형태를 테스트할 수 있는 것이 없어 추가하면 좋을 것 같습니다.
