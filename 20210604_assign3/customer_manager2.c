@@ -2,6 +2,9 @@
    assignmnet #3
    customer_manager2.c */
 
+# linked list 구조를 사용하였으나, forward만 사용하는 대신 backward 연결도 사용
+# 성능 향상을 기대했으나 비효율이 발생하여 개선 필요
+
 #define _GNU_SOURCE
 #include <assert.h>
 #include <stdlib.h>
